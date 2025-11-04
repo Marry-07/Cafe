@@ -277,7 +277,7 @@ button {
   font-size: var(--font-size-less);
   font-weight: 400;
   color: #707070;
-  padding: 16px 0 32px;
+  padding: 16px 7px 32px;
 }
 
 .card-back {

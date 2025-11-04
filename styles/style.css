@@ -84,7 +84,7 @@ button {
 /* header */
 
 .back_wrap {
-  background-image: url(/images/background_coffee.png);
+  background-image: url("./images/background_coffee.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -388,7 +388,7 @@ button {
 /* morning */
 
 .cofe-morning {
-  background: url("/images/background_2.png");
+  background: url("./images/background_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -541,7 +541,7 @@ button {
 
 .subscribe {
   min-height: 374px;
-  background: url(/images/back3.png);
+  background: url("./images/back3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -625,7 +625,7 @@ input[type="email"] {
 
 .footer {
   color: var(--light);
-  background: url(/images/back_footer.png);
+  background: url("./images/back_footer.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

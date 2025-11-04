@@ -1,0 +1,344 @@
+:root {
+  --main-size-less: 35px;
+}
+
+/* media */
+
+@media (max-width: 1240px) {
+  .cup-of-beans .container {
+    gap: 25px;
+  }
+  .cup-of-beans__discov {
+    padding-left: 20px;
+  }
+  .cards-little {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+  }
+  .cofe-morning .container {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .cards-little {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .cup-of-beans img {
+    display: none;
+  }
+  .cup-of-beans__discov {
+    margin: 0 auto;
+  }
+  .back_wrap {
+    margin-bottom: 50px;
+  }
+  .cup-of-beans .btn {
+    margin-bottom: 35px;
+  }
+  .cofe-morning .container {
+    gap: 5px;
+  }
+  .cofe-morning img {
+    width: 260px;
+    height: 400px;
+  }
+  .morning-title {
+    font-size: 45px;
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+  .morning-text {
+    width: 470px;
+  }
+  .square {
+    display: none;
+  }
+  .wrap_quote blockquote::after {
+    left: 5%;
+  }
+}
+
+@media (max-width: 855px) {
+  
+
+  /*меню для телефонов сюда*/
+  /* .menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0 ;
+  }
+
+  .header__nav > a {
+    display: none;
+  }
+
+  .header__nav.open {
+    display: block;
+    position: absolute;
+    top: 68px;
+    right: 200px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 8px;
+    min-width: 130px;
+  }
+
+ .header__nav.open a:first-child {
+    margin: 6px 0 0 30px;
+ }
+  .header__nav.open > a {
+    display: block;
+    color: #1e1e1e;
+    white-space: nowrap;
+  }
+  .header__nav.open > a + a {
+    margin-top: 14px;
+  } */
+
+
+
+
+  .header__nav a + a {
+    margin-left: 30px;
+  }
+  .header__reg a {
+    margin-right: 20px;
+  }
+  .big-coffee__main-title {
+    font-size: 165px;
+  }
+  .big-coffee__title {
+    font-size: 18px;
+  }
+  .big-coffee__desc {
+    font-size: 17px;
+  }
+  .enjoy-coffee .title-info {
+    font-size: var(--main-size-less);
+  }
+  .enjoy-coffee .min-text {
+    font-size: 17px;
+  }
+  .cofe-morning img {
+    margin: 100px 0 auto;
+    width: 200px;
+    height: 320px;
+  }
+  .cofe-morning .container {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+  .cofe-morning__text {
+    width: 520px;
+  }
+  .footer .container {
+    padding-top: 90px;
+    padding-bottom: 40px;
+    gap: 20px;
+  }
+  .ls-items a {
+    font-size: 15px;
+  }
+  .footer__list {
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 0;
+  }
+
+  .footer__list__title--third {
+    text-align: end;
+  }
+  .ls-items--third {
+    text-align: end;
+  }
+  .footer__logo-text p {
+    font-size: 12px;
+  }
+  .footer__logo-text .logo {
+    font-size: var(--main-size-less);
+  }
+  .footer__list__title {
+    font-size: 17px;
+  }
+  .footer__list__title:not(.footer__list__title--third) {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 725px) {
+  .cofe-morning img {
+    display: none;
+  }
+  .cofe-morning__text {
+    padding: 0 12px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .big-coffee__main-title {
+    font-size: 130px;
+  }
+  .big-coffee__title {
+    font-size: 14px;
+  }
+  .big-coffee__desc {
+    max-width: 280px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .big-coffee {
+    padding-left: 45px;
+  }
+  .btn {
+    padding: 9px 21px;
+    font-size: 14px;
+  }
+  .cup-of-beans__discov {
+    padding-right: 20px;
+  }
+  .cup-of-beans__subtitle {
+    font-size: var(--main-size-less);
+  }
+  .cup-of-beans__beans-text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .coffee-cards {
+    margin-bottom: 45px;
+  }
+  .different-cofe .title-info {
+    font-size: var(--main-size-less);
+  }
+  .main-quote .all-text-desc .title-info {
+    font-size: var(--main-size-less);
+  }
+  .wrap_quote blockquote {
+    padding-top: 80px;
+  }
+  .wrap_quote blockquote::after {
+    transform: scale(0.6);
+    top: 15px;
+  }
+  .sub-text {
+    font-size: var(--main-size-less);
+  }
+  .subscribe__text {
+    font-size: 18px;
+  }
+  .form input {
+    max-width: 530px;
+    padding-right: 50px;
+  }
+  .socials img {
+    height: 20px;
+  }
+  .footer .container {
+    gap: 25px;
+  }
+  .ls-items li + li {
+    padding-top: 10px;
+  }
+
+  .footer .container {
+    display: flex;
+    padding-top: 25px;
+  }
+  .footer__list {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    justify-items: center;
+    row-gap: 10px;
+  }
+  .footer__list__title--third {
+    text-align: center;
+  }
+  .ls-items--third {
+    text-align: center;
+  }
+  .footer__logo-text p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__list {
+    text-align: end;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    padding-right: 35px;
+  }
+  .footer__logo-text {
+    padding-left: 35px;
+  }
+  .footer .container {
+    display: flex;
+    padding-top: 25px;
+  }
+  .footer__list {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    justify-items: center;
+    gap: 0;
+  }
+  .footer__logo-text p {
+    width: 100%;
+  }
+  .footer__list__title--third {
+    text-align: center;
+  }
+  .ls-items--third {
+    text-align: center;
+  }
+  .header .btn {
+    padding: 4px 18px;
+    font-size: 12px;
+  }
+  .header__reg a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header .logo {
+    font-size: 27px;
+  }
+  .header__reg a {
+    margin-right: 10px;
+  }
+  .big-coffee {
+    padding-left: 20px;
+    width: 200px;
+  }
+  .morning-title {
+    padding-top: 20px;
+    font-size: var(--main-size-less);
+  }
+  .morning-text {
+    font-size: 18px;
+  }
+  .form input {
+    max-width: 500px;
+    height: 45px;
+    padding-right: 20px;
+  }
+  input[type="email"] {
+    font-size: 16px;
+  }
+  .form button {
+    padding: 12px 9px;
+    font-size: 16px;
+  }
+}

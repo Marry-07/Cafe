@@ -16,6 +16,12 @@
     padding-right: 10px;
     gap: 10px;
   }
+
+  .cards-strange {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+  }
   .cofe-morning .container {
     gap: 80px;
   }
@@ -23,6 +29,10 @@
 
 @media (max-width: 1170px) {
   .cards-little {
+    justify-content: center;
+    gap: 30px;
+  }
+  .cards-strange {
     justify-content: center;
     gap: 30px;
   }
@@ -56,56 +66,68 @@
   .morning-text {
     width: 470px;
   }
+
   .square {
-    display: none;
+    width: 62px;
+    height: 62px;
+    top: 485px;
+    left: 50px;
   }
+  .square.square--right {
+    right: 50px;
+  }
+
+  .square--left::after {
+    top: 22px;
+    left: 23px;
+  }
+  .square--right::after {
+    top: 22px;
+    left: 23px;
+  }
+
   .wrap_quote blockquote::after {
     left: 5%;
   }
 }
 
 @media (max-width: 855px) {
-  
-
   /*меню для телефонов сюда*/
-  /* .menu {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    padding: 0 ;
+  .header .container {
+    width: 100%;
+    overflow: hidden;
   }
-
-  .header__nav > a {
-    display: none;
-  }
-
-  .header__nav.open {
+  .header__btn {
     display: block;
+  }
+  .header__reg {
+    align-self: center;
+  }
+  .header__nav {
+    /* display: none; */
     position: absolute;
-    top: 68px;
-    right: 200px;
-    background: rgba(255,255,255,0.35);
-    border-radius: 8px;
-    min-width: 130px;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    padding: 80px 20px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.5s;
   }
 
- .header__nav.open a:first-child {
-    margin: 6px 0 0 30px;
- }
-  .header__nav.open > a {
+  .header__nav a {
     display: block;
-    color: #1e1e1e;
-    white-space: nowrap;
+    font-size: 21px;
+    padding: 10px 0;
   }
-  .header__nav.open > a + a {
-    margin-top: 14px;
-  } */
 
+  .header.open .header__nav {
+    transform: none;
+  }
 
-
-
+  .header__nav a:nth-child(1) {
+    margin-left: 30px;
+  }
   .header__nav a + a {
     margin-left: 30px;
   }
@@ -214,21 +236,28 @@
     font-size: 16px;
     line-height: 25px;
   }
-  .coffee-cards {
-    margin-bottom: 45px;
-  }
+
   .different-cofe .title-info {
     font-size: var(--main-size-less);
   }
+
+  .different-cofe .title-info--less_text {
+    font-size: 22px;
+  }
+
+  .reverse-card .title-info {
+    font-size: 35px;
+  }
+
   .main-quote .all-text-desc .title-info {
     font-size: var(--main-size-less);
   }
   .wrap_quote blockquote {
     padding-top: 80px;
   }
-  .wrap_quote blockquote::after {
-    transform: scale(0.6);
-    top: 15px;
+  .wrap-quote blockquote::after {
+    transform: scale(0.8);
+    top: 45px;
   }
   .sub-text {
     font-size: var(--main-size-less);
@@ -273,6 +302,24 @@
 }
 
 @media (max-width: 450px) {
+  .header__btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__btn span {
+    width: 19px;
+    height: 2px;
+    right: 11px;
+  }
+  .header__btn span:nth-child(1) {
+    transform: translateY(-8px);
+  }
+
+  .header__btn span:nth-child(3) {
+    transform: translateY(8px);
+  }
+
   .footer__list {
     text-align: end;
     grid-template-columns: 1fr;
@@ -309,12 +356,35 @@
   .header__reg a {
     font-size: 13px;
   }
+
+  .square {
+    top: 600px;
+    left: 50px;
+  }
+  .square.square--right {
+    right: 50px;
+  }
+
+  .square--left::after {
+    top: 22px;
+    left: 23px;
+  }
+  .square--right::after {
+    top: 22px;
+    left: 23px;
+  }
 }
 
 @media (max-width: 400px) {
   .header .logo {
-    font-size: 27px;
+    font-size: 35px;
   }
+  .header__reg {
+    position: absolute;
+    top: 70px;
+    padding-left: 10px;
+  }
+
   .header__reg a {
     margin-right: 10px;
   }
@@ -341,5 +411,12 @@
     padding: 12px 9px;
     font-size: 16px;
   }
-  
+  .wrap-quote blockquote::after {
+    transform: scale(0.6);
+    top: 45px;
+  }
+
+  .square {
+    display: none;
+  }
 }

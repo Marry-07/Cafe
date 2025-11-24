@@ -91,10 +91,6 @@ button {
   min-height: 100vh;
   min-width: 0;
   margin-bottom: 150px;
-
-  overflow: hidden;
-  position: relative;
-  width: 100%;
 }
 
 .header {
@@ -167,47 +163,6 @@ button {
   background-color: #785e36;
 }
 
-.header__btn {
-  display: none;
-  position: relative;
-  z-index: 2;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background-color: rgba(93, 93, 93, 0.538);
-  margin-right: 10px;
-  border-radius: 30px;
-}
-
-.header__btn span {
-  position: absolute;
-  width: 27px;
-  height: 3px;
-  background-color: #fff;
-  right: 11px;
-  border-radius: 5px;
-  transition: opacity .5s, transform .5s;
-}
-
-.header__btn span:nth-child(1) {
-  transform: translateY(-10px);
-}
-
-.header__btn span:nth-child(3) {
-  transform: translateY(10px);
-}
-
-.header.open .header__btn span:nth-child(1) {
-  transform: translateY(0) rotate(45deg);
-}
-
-.header.open .header__btn span:nth-child(2) {
-  opacity: 0;
-}
-
-.header.open .header__btn span:nth-child(3) {
-  transform: translateY(0) rotate(-45deg);
-}
 
 /* MAIN */
 /* big coffee */
@@ -333,15 +288,8 @@ button {
 }
 
 .one-card {
-  overflow: hidden;
   height: 388px;
   flex: 0 0 auto; /*как растягивается, как сжимается, базисный размер (умолчание)*/
-}
-
-.one-card img {
-  width: 280px;
-  height: 222px;
-  object-fit: cover;
 }
 
 .cards-text {
@@ -381,7 +329,6 @@ button {
 /* different cofe */
 .different-cofe {
   margin-bottom: var(--section-distance);
-  margin-top: 30px;
 }
 
 .cards-little {
@@ -402,13 +349,6 @@ button {
   width: 280px;
   background-color: #fff9f1;
   border: 1px solid rgba(249, 192, 106, 0.42);
-
-  transition: background-color 1.5s ease, transform 1s ease;
-}
-
-.one-little:hover {
-  transform: rotate(7deg);
-  background-color: rgba(246, 185, 216, 0.208);
 }
 
 .one-little .cards-text p {
@@ -429,6 +369,8 @@ button {
 
 .min-text--text_two {
   padding: 0;
+  /* padding-top: 32px;
+  padding-bottom: 8px; */
   padding: 32px 7px 8px;
 }
 .title-info--less_text {
@@ -442,108 +384,6 @@ button {
   padding: 14px 41px;
   margin: 24px auto 0;
 }
-
-/* reverse card */
-
-.reverse-card {
-  margin-bottom: 100px;
-}
-
-.cards-strange {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.one-strange-card {
-  position: relative;
-  perspective: 1000px;
-  cursor: pointer;
-  height: 284px;
-  width: 280px;
-  background-color: #fff9f1;
-  border: none;
-}
-
-.one-strange-card-inner { 
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-
-/* Если у внешней карточки появляется класс .flip - внутренний блок поворачивается на 180 */
-.one-strange-card.flip .one-strange-card-inner {
-  transform: rotateY(180deg);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
-}
-
-.one-strange-card-front,
-.one-strange-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /*скрываем блок (передний, задний). Иначе - зеркальность*/
-  background-color: #fff9f1;
-  border: 1px solid rgba(249, 192, 106, 0.42);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Задняя сторона */
-.one-strange-card-back {
-  transform: rotateY(180deg);
-  padding: 20px;
-  text-align: center;
-}
-
-.one-strange-card img {
-  margin: 36px auto 25px;
-}
-
-.one-strange-card {
-  height: 284px;
-  width: 280px;
-  background-color: #fff9f1;
-  border: 1px solid rgba(249, 192, 106, 0.42);
-}
-
-.one-strange-card .cards-text p {
-  max-width: 192px;
-  font-size: var(--font-size-less);
-  color: #707070;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  padding: 8px 0 0;
-  margin: 0 auto;
-}
-
-.one-strange-card .cards_text h4 {
-  font-size: 28px;
-}
-
-.reverse-card .btn {
-  display: flex;
-  font-size: 16px;
-  font-weight: 800;
-  padding: 14px 41px;
-  margin: 24px auto 0;
-}
-
-
-
-
-
-
 
 /* morning */
 
@@ -607,7 +447,7 @@ button {
 .author .min-text {
   padding-bottom: 0;
   padding-top: 4px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .author .title-info {
@@ -617,7 +457,7 @@ button {
 .quote {
   position: relative;
   max-width: 980px;
-  min-height: 524px;
+  /* min-height: 524px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -627,11 +467,11 @@ button {
   margin: 0 auto;
 }
 
-.wrap-quote {
+.wrap_quote {
   position: relative;
 }
 
-.wrap-quote blockquote {
+.wrap_quote blockquote {
   position: relative;
   text-align: center;
   max-width: 780px;
@@ -643,12 +483,11 @@ button {
   padding: 129px 10px 28px;
 }
 
-.wrap-quote blockquote::after {
+.wrap_quote blockquote::after {
   content: url("../images/chars.png");
   position: absolute;
   top: 45px;
-  left: 0;
-  padding-left: 10px;
+  left: -8%;
 }
 
 .square {
@@ -660,9 +499,7 @@ button {
   position: absolute;
   top: 65%;
   left: -140px;
-  border: none;
 }
-
 
 .square.square--right {
   left: auto;
@@ -693,12 +530,11 @@ button {
 }
 
 .author img {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 112px;
   position: absolute;
   left: 25%;
   bottom: -60px;
-  border-radius: 20px;
 }
 
 /* subscribe */

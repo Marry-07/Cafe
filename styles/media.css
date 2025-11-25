@@ -36,6 +36,10 @@
     justify-content: center;
     gap: 30px;
   }
+  .enjoy-coffee {
+    margin-top: var(--section-distance);
+    margin-bottom: var(--section-distance);
+  }
 }
 
 @media (max-width: 1110px) {
@@ -142,8 +146,9 @@
   .big-coffee__desc {
     font-size: 17px;
   }
-  .enjoy-coffee .title-info {
-    font-size: var(--main-size-less);
+  .enjoy-coffee {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .enjoy-coffee .min-text {
     font-size: 17px;
@@ -234,6 +239,10 @@
   .cup-of-beans__beans-text {
     font-size: 16px;
     line-height: 25px;
+  }
+
+  .enjoy-coffee .title-info {
+    font-size: var(--main-size-less); 
   }
 
   .different-cofe .title-info {

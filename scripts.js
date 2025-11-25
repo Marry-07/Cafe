@@ -54,7 +54,7 @@ survived not only five centuries, but also the leap into
 electronic typesetting, remaining essentially unchanged. It was
 popularised in the 1960s with the release of Letraset...`,
     name: 'Jonny Thomas',
-    role: 'Project Manager',
+    who: 'Project Manager',
     img: 'images/man.png'
   },
   {
@@ -68,7 +68,7 @@ Forgotten languages taste like fuzzy electric stairs.
 His polka-dot umbrella collects falling starlight and numbers.
 The transparent elephant solved a riddle with a glass key...`,
     name: 'Mira Cloudy',
-    role: 'Cool woman',
+    who: 'Cool woman',
     img: 'images/woman.jpg'
   },
   {
@@ -80,7 +80,7 @@ survived not only five centuries, but also the leap into
 electronic typesetting, remaining essentially unchanged. It was
 popularised in the 1960s with the release of Letraset...`,
     name: 'Alex Miller',
-    role: 'Designer',
+    who: 'Designer',
     img: 'images/man2.jpg'
   },
   {
@@ -94,49 +94,38 @@ Lost socks speak in tangled alphabet soup.
 A concrete feather dances on a hot stove.
 Quiet avalanches happen in teacups at dawn....`,
     name: 'Darina Centra',
-    role: 'funny girl',
+    who: 'funny girl',
     img: 'images/woman2.jpg'
   }
 ];
 
 
-const quoteEl = document.querySelector('.wrap-quote blockquote');
-const authorNameEl = document.querySelector('.author .title-info');
-const authorRoleEl = document.querySelector('.author .min-text');
-const authorImgEl = document.querySelector('.author img');
-
+const quote = document.querySelector('.wrap-quote blockquote');
+const authorName = document.querySelector('.author .title-info');
+const authorWho = document.querySelector('.author .min-text');
+const authorImg = document.querySelector('.author img');
 const btnLeft = document.querySelector('.square--left');
 const btnRight = document.querySelector('.square--right');
+let element = 0;
 
-let currentIndex = 0;
-
-/* ---------- функция обновления содержимого (с анимацией появления) ---------- */
 function showQuote(index) {
-  const q = quotes[index];
+  const currentElement = quotes[index];
 
-
-
-  // через небольшой таймаут меняем контент (промежуток = время CSS перехода)
-  setTimeout(() => {
-    quoteEl.textContent = q.text;
-    authorNameEl.textContent = q.name;
-    authorRoleEl.textContent = q.role;
-    authorImgEl.src = q.img;
-    authorImgEl.alt = `Photo of ${q.name}`;
-
-
-  }, 100); 
+  quote.textContent = currentElement.text;
+  authorName.textContent = currentElement.name;
+  authorWho.textContent = currentElement.who;
+  authorImg.src = currentElement.img;
 }
 
-/* ---------- обработчики кнопок (цикличность) ---------- */
+// цикл
 btnRight.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % quotes.length;
-  showQuote(currentIndex);
+  element = (element + 1) % quotes.length;
+  showQuote(element);
 });
 
 btnLeft.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
-  showQuote(currentIndex);
+  element = (element - 1 + quotes.length) % quotes.length;
+  showQuote(element);
 });
 
 
